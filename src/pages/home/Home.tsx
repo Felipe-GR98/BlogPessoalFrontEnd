@@ -2,57 +2,22 @@
 function Home(){
   return(
     <>
-    <div style={{
-      backgroundColor:'#312e81',
-      display:'flex',
-      justifyContent:'center',
-    }}
-    >
-        <div style={{
-          display:'grid',
-          gridTemplateColumns:'1fr 1fr',
-          color:'white',
-          width:'100%',
-          maxWidth:'1280px',
-        }}>
-          <div style={{ 
-            display:'flex',
-            flexDirection:'column',
-            justifyContent:'center',
-            alignItems:'center',
-            gap:'1rem',
-            paddingBottom:'1rem',
-            }}>
+    <div className="bg-indigo-900 flex justify-center">
+        <div className='container grid grid-cols-2 text-white' >
+          <div className="flex flex-col gap-4 items-center justify-center py-4">
 
-              <h2 style={{
-                fontSize:'3rem',
-                fontWeight:'bold',
-              }}>Seja Bem Vinde!</h2>
+              <h2 className='text-5xl font-bold'>Seja Bem Vinde!</h2>
 
-            <p style={{
-              fontSize:'1.25rem',
-            }}>Esperesse aqui seus pensamentos e Opiniões</p>
+            <p className="text-xl">Esperesse aqui seus pensamentos e Opiniões</p>
 
-          <div style={{
-            display:'flex',
-            gap:'1rem',
-            justifyContent:'space-around',
-          }}>
-            <div style={{
-              borderRadius:'0.5rem',
-              color:'white',
-              border:'2px solid white',
-              padding:'0.5rem 1rem'
-            }}>
+          <div className="flex justify-aroud gap-4">
+            <div className="rounded text-white boder-white border-solir boder-2 py-2 pc-4">
           
             Nova Postagem
         </div>
       </div>
     </div>
-    <div style={{
-      display:'flex',
-      justifyContent:'center',
-    }}>
+    <div className="flex justify-center">
       <img 
       src="https://i.imgur.com/fyfri1v.png"
       alt="Imagem Da página Home"
