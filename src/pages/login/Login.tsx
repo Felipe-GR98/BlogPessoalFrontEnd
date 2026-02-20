@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, type ChangeEvent, type FormEvent } from "react";
+import { useContext, useEffect, useState, type ChangeEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { AuthContext } from "../../contestx/AuthContext";
@@ -18,6 +18,7 @@ function Login() {
         if (usuario.token !== "") {
             navigate('/home')
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [usuario])
 
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
@@ -27,7 +28,7 @@ function Login() {
         })
     }
 
-    function login(e: FormEvent<HTMLFormElement>) {
+    function login(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         handleLogin(usuarioLogin)
     }
