@@ -36,6 +36,7 @@ function ListaTemas() {
             await buscar('/temas', setTemas, {
                 headers: { Authorization: token }
             })
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             if (error.toString().includes('401')) {
                 handleLogout()
