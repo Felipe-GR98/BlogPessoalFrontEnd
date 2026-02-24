@@ -1,9 +1,9 @@
-import { useState, useContext, useEffect } from "react"
-import { useNavigate, useParams } from "react-router-dom"
-import { AuthContext } from "../../../contexts/AuthContext"
-import { buscar, deletar } from "../../../services/Service"
-import { ClipLoader } from "react-spinners"; 
-import  Tema from '../../../models/Tema';
+import { useContext, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { ClipLoader } from "react-spinners";
+import { AuthContext } from "../../../contestx/AuthContext";
+import type Tema from '../../../models/Tema';
+import { buscar, deletar } from "../../../services/Services";
 
 function DeletarTema() {
 
@@ -25,6 +25,7 @@ function DeletarTema() {
                     'Authorization': token
                 }
             })
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             if (error.toString().includes('401')) {
                 handleLogout()
@@ -57,6 +58,7 @@ function DeletarTema() {
 
             alert('Tema deletado com sucesso')
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             if (error.toString().includes('401')) {
                 handleLogout()

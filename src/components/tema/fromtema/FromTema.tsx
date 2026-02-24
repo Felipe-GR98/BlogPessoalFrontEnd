@@ -2,7 +2,7 @@ import { useContext, useEffect, useState, type ChangeEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { AuthContext } from "../../../contestx/AuthContext";
-import type Tema from "../../../models/Tema";
+import type { Tema } from "../../../models/Tema";
 import { atualizar, buscar, cadastrar } from "../../../services/Services";
 
 function FormTema() {
@@ -23,6 +23,7 @@ function FormTema() {
             await buscar(`/temas/${id}`, setTema, {
                 headers: { Authorization: token }
             })
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             if (error.toString().includes('403')) {
                 handleLogout()
@@ -64,6 +65,8 @@ function FormTema() {
                     headers: { 'Authorization': token }
                 })
                 alert('O Tema foi atualizado com sucesso!')
+                
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
             } catch (error: any) {
                 if (error.toString().includes('401')) {
                     handleLogout();
@@ -78,6 +81,8 @@ function FormTema() {
                     headers: { 'Authorization': token }
                 })
                 alert('O Tema foi cadastrado com sucesso!')
+                
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
             } catch (error: any) {
                 if (error.toString().includes('401')) {
                     handleLogout();

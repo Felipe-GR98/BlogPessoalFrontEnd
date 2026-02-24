@@ -1,3 +1,4 @@
+import ListaPostagens from "../../components/postagens/listapostagens/ListaPostagens"
 
 function Home(){
   return(
@@ -24,7 +25,9 @@ function Home(){
       style={{width:'66%'}}/>
         </div>
     </div>
-  </div>    
+  </div>   
+
+   <ListaPostagens/> 
     </>
   )
 }
