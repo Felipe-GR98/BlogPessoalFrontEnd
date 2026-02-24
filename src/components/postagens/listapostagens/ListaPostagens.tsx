@@ -4,6 +4,7 @@ import { SyncLoader } from "react-spinners";
 import { AuthContext } from "../../../contestx/AuthContext";
 import type Postagem from "../../../models/Postagem";
 import { buscar } from "../../../services/Services";
+import { ToastAlerta } from "../../../utils/ToastAlert";
 import CardPostagem from "../cardpostagens/CardPostagens";
 
 function ListaPostagens() {
@@ -19,7 +20,7 @@ function ListaPostagens() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado!')
+            ToastAlerta('Você precisa estar logado!', 'info')
             navigate('/')
         }
     }, [token])

@@ -4,6 +4,7 @@ import { SyncLoader } from "react-spinners";
 import { AuthContext } from "../../../contestx/AuthContext";
 import type Tema from "../../../models/Tema";
 import { buscar } from "../../../services/Services";
+import { ToastAlerta } from "../../../utils/ToastAlert";
 import CardTema from "../cardTema/CardTema";
 
 function ListaTemas() {
@@ -19,7 +20,7 @@ function ListaTemas() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado!')
+            ToastAlerta('Você precisa estar logado!','info')
             navigate('/')
         }
     }, [token])
