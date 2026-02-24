@@ -33,7 +33,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     async function handleLogin(usuarioLogin: UsuarioLogin) {
         setIsLoading(true)
         try {
-            await login(`/usuarios/login`, usuarioLogin, setUsuario)
+            await login(`/usuarios/logar`, usuarioLogin, setUsuario)
             ToastAlerta("O Usuário foi autenticado com sucesso!",'sucesso')
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
