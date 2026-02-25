@@ -27,7 +27,7 @@ function App() {
               <Route path='/login' element={<Login/>}/>
               <Route path='/home' element={<Home/>}/>
               <Route path='/cadastro' element={<Cadastro/>}/>
-              <Route path='/tema' element={<ListaTema/>}/>
+              <Route path='/temas' element={<ListaTema/>}/>
               <Route path="/cadastrartema" element={<FormTema />} />
               <Route path="/editartema/:id" element={<FormTema />} />
               <Route path="/deletartema/:id" element={<DeletarTema />} />

@@ -34,7 +34,7 @@ function ListaTemas() {
 
             setIsLoading(true)
 
-            await buscar('/tema', setTemas, {
+            await buscar('/temas', setTemas, {
                 headers: { Authorization: token }
             })
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
