@@ -121,7 +121,7 @@ function FormTema() {
                     type="submit"
                     >
                       {isLoading ? <ClipLoader color="#ffffff" size={24} /> : <span>{id === undefined ? 'Cadastrar' : 'Atualizar'}</span>}
-                    Cadastrar
+                    
                 </button>
             </form>
         </div>
